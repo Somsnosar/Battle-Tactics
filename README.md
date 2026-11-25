@@ -8,6 +8,6 @@ Guide to installing the mod! (Hoping to get the game on r2modman but for now, it
 Scroll down to assets, and download the version destined for your device.
 Once downloaded, unzip in any old directory then place the contents into "~/For The King II"
 <img width="1791" height="1010" alt="image" src="https://github.com/user-attachments/assets/1fad210d-ccf8-44f5-9c4a-4eb9b04c1fa5" />
-Now you can download the mod!
-Download the Battle-Tactics.dll from this page in the releases section on the right, and drag that into "~/For The King II/BepInEx/plugins".
+Now you can download the mod!<br>
+Download the Battle-Tactics.dll from this page in the releases section on the right, and drag that into "~/For The King II/BepInEx/plugins".<br>
 There might not be a plugins folder there, so make one!
