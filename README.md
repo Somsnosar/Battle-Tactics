@@ -12,3 +12,7 @@ Now you can download the mod!<br>
 <img width="1604" height="915" alt="image" src="https://github.com/user-attachments/assets/12321e8c-230d-4518-8c1a-e63931aecd7c" />
 Download the Battle-Tactics.dll from this page in the releases section on the right, and drag that into "~/For The King II/BepInEx/plugins/Battle-Tactics".<br>
 There might not be a plugins folder there, so make one! Then everyone will have to make the next "Battle-Tactics" folder within that.
+# Function
+<img width="800" height="800" alt="Untitledproject-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/9be180a3-3c21-4ce2-98c4-5a5dbb785d62" />
+Allows tactical positioning of your party members via click-and-drag!<br>
+This feature won't work in places you dont have access to your portraits, such as the dark carnival. I can patch this feature in if it's desired.
