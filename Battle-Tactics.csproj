@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>Battle-Tactics</AssemblyName>
+    <RootNamespace>BattleTactics</RootNamespace>
+    <LangVersion>9.0</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+
+    <!-- dotnet build -p:FTK2Dir="A:\SteamLibrary\steamapps\common\For The King II" FOR MY COMPUTER!!!!! -->
+    <FTK2Dir Condition="'$(FTK2Dir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\For The King II</FTK2Dir>
+    <ManagedDir>$(FTK2Dir)\For The King II_Data\Managed</ManagedDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- BepInEx and Harmony come from the game folder -->
+    <Reference Include="BepInEx">
+      <HintPath>$(FTK2Dir)\BepInEx\core\BepInEx.dll</HintPath><Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(FTK2Dir)\BepInEx\core\0Harmony.dll</HintPath><Private>false</Private>
+    </Reference>
+
+    <GameRef Include="$(ManagedDir)\*.dll"
+             Exclude="$(ManagedDir)\mscorlib.dll;$(ManagedDir)\System*.dll;$(ManagedDir)\netstandard.dll;$(ManagedDir)\Mono.*.dll;$(ManagedDir)\Microsoft.*.dll;$(ManagedDir)\Accessibility.dll" />
+    <Reference Include="@(GameRef)" Private="false" />
+  </ItemGroup>
+
+  <Target Name="CopyToGame" AfterTargets="Build" Condition="Exists('$(FTK2Dir)\BepInEx\plugins')">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(FTK2Dir)\BepInEx\plugins\Battle-Tactics" />
+  </Target>
+
+</Project>
